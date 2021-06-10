@@ -91,13 +91,22 @@ pre {
   height: 350px;
 }
 
-/* Empleamos los pseudo elementos (::after, ::before, etc) para agregar contenido que no afectará la accesibilidad
-de nuestra web, como sucedería si lo agregamos dentro de la semantica HTML */
-h3::before {
-  content: '-';
+/* CSS Counters: "counter()" reset, increment, etc. */
+.section-content {
+  counter-reset: titleList;
 }
 
-h3::after {
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+/* Empleamos los pseudo elementos (::after, ::before, etc) para agregar contenido que no afectará la accesibilidad
+de nuestra web, como sucedería si lo agregamos dentro de la semantica HTML */
+.section-content h3::before {
+  content: counter(titleList, decimal);
+}
+
+.section-content h3::after {
   content: '';
   width: 80px;
   height: 4px;
