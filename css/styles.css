@@ -74,3 +74,18 @@ h2 {
 h3 {
   font-size: 1.5em;
 }
+
+pre {
+  background: #FEC62E;
+}
+
+.hero {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png');
+  /* un color, por ejemplo, blanco, puede expresarse como una función rgba() */
+  /* linear-gradient(to top, red, blue) degradado va de abajo hacia arriba y de rojo a azul */
+  /* background: red url('../images/pattern.png'); */
+  /* background-repeat: no-repeat; La imagen no se repetirá, util para cuando se trata de una fotografía */
+  /* background-position: left 50px bottom -50px; posicionará la imagen en alguna combinación de los ejes X e Y, o hasta en el centro. */
+  /* background-size: cover; Expandirá al 100% sin perder la proporción */
+  height: 350px;
+}
