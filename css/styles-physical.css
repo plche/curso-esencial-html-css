@@ -74,6 +74,7 @@ h1 {
   /* margin: 64px 10px 16px 20px;
   margin: 10px 5px; 10px hacia arriba y hacia abjo y 5px a la derecha y a la izquierda
   margin: 30px 20px 10px; 30px hacia arriba, 20px a la derecha y a la izquierda y 10px hacia abajo */
+  /* border: 1px solid red; */
 }
 
 /* h1 + p {
@@ -108,7 +109,14 @@ pre {
 blockquote {
   font-size: 24px;
   margin: 32px 0;
-  padding-left: 40px;
+  padding-left: 16px;
+  line-height: 24px;
+  /* border: 10px solid red; */
+  /* border-top: 1px solid pink; */
+  /* border-top-color: aqua; */
+  /* border-top-style: dashed; */
+  /* border-radius: 50px 100px 10px 0; */
+  border-left: 4px solid var(--gray30);
 }
 
 blockquote span {
@@ -117,6 +125,22 @@ blockquote span {
 
 blockquote span::before {
   content: '-';
+}
+
+/* Clase utilitaria, para hacer depuración de estilos desde el HTML */
+/* Le agregamos la clave !important para que prevalezca sobre cualquier otra estilo de clase debido a la Cascada */
+/* También podríamos usar background */
+/* Y una mejor opción es emplear outline, que se parece mucho a border, pero no suma al tamaño final del elemento. */
+/* También se puede usar box-sizing: border-box más border: 1px solid red y combinarlo con con otra
+clase que defina un cuadrado con width y height */
+/* Otra técnia que también se puede emplear es con box-shadow, tanto como para fuera de la caja
+como para dentro con el parámetro inset; se parece mucho a outline */
+.debug {
+  box-shadow: inset 0 0 0 1px red;
+  /* outline: 1px solid red; */
+  /* background: red; */
+  /* border: 1px solid red !important;
+  box-sizing: border-box; */
 }
 
 .hero {
@@ -162,7 +186,7 @@ blockquote span::before {
 
 .section-content h3 {
   counter-increment: titleList;
-  background: red;
+  /* background: red; */
   padding-bottom: 4px;
 }
 
