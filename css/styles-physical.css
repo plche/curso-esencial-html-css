@@ -127,6 +127,32 @@ blockquote span::before {
   content: '-';
 }
 
+.main {
+  /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png'); */
+}
+
+.wrapper {
+  width: 902px;
+  margin: auto; /* para centrar mi caja a ambos lados, ojo que el elemento deberá ser de bloque*/
+}
+
+.main-content {
+  background: white;
+  padding: 20px;
+}
+
+.title {
+  background: red;
+}
+
+.services {
+  background: purple;
+}
+
+.pricing {
+  background: blue;
+}
+
 /* Clase utilitaria, para hacer depuración de estilos desde el HTML */
 /* Le agregamos la clave !important para que prevalezca sobre cualquier otra estilo de clase debido a la Cascada */
 /* También podríamos usar background */
