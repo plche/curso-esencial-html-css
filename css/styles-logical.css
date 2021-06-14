@@ -106,6 +106,9 @@ hr {
 
 pre {
   background: var(--white10);
+  padding: 40px;
+  overflow: auto;
+  border-radius: 8px;
 }
 
 p {
@@ -128,6 +131,10 @@ p {
 .section-content img {
   margin-block-start: 40px;
   display: block;
+  /* Si en m.f. deseamos que nuestras imágenes se redimensionen al ancho de la ventana del navegador:
+  max-width: 100%; */
+  /* Mismo resultado de arriba pero en m.l.: */
+  max-inline-size: 100%;
 }
 
 /* CSS Counters: "counter()" reset, increment, etc. */
@@ -145,19 +152,30 @@ de nuestra web, como sucedería si lo agregamos dentro de la semantica HTML */
   content: counter(titleList, decimal) '. ';
 }
 
-.section-content h3::after {
+/* .section-content h3::after {
   content: '';
   width: 80px;
   height: 4px;
   background: var(--white30);
   display: inline-block;
-}
+} */
 
 blockquote {
   margin-block-start: 80px;
   margin-block-end: 63px;
   background-color: var(--white10);
   border-radius: 8px;
+  line-height: 32px;
+  font-size: 24px;
+  /* padding: 24px; */
+  padding-inline-start: 24px;
+  padding-inline-end: 24px;
+  padding-block-start: 24px;
+  padding-block-end: 24px;
+}
+
+blockquote p {
+  color: var(--white30);
 }
 
 /* ::selection {
@@ -166,4 +184,28 @@ blockquote {
 
 .main hr {
   display: none;
+}
+
+.main {
+  /* border: 1px solid red; */
+}
+
+.wrapper {
+  /* border: 1px solid yellow; */
+  /* En m.l. width: ; equiale a:
+  inline-size: 902px; */
+  /* En m.f. si quisieramos establecer un ancho máximo para cuando redimensionemos la ventana del navegador:
+  max-width: 902px; */
+  /* En m.l. si queremos establcer un ancho máximo para cuando redimensionemos la ventana del navegador: */
+  max-inline-size: 902px;
+  /* block-size: 100px; */
+  /* overflow: hidden; */ /* Para ocultar todo lo que se desorda */
+  /* overflow: auto; */ /* Para permitir scroll/desplazar al contenido que se desborda */
+  margin: auto;
+}
+
+.main-content {
+  /* padding: 16px; */
+  padding-inline: 16px;
+  /* border: 1px solid blue; */
 }
