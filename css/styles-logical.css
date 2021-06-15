@@ -146,7 +146,7 @@ pre {
   border: 10px solid red;
   border-left: 5px solid blue;
   /* Este mismo efecto en m.l. seria: */
-  border-inline-start: 5px solid white;
+  border-inline-start: 5px solid var(--white30);
   /* Si quisieramos un efecto parecido pero arriba y abajo sería: */
   /* border-block: 20px solid pink; */
   /* Para conseguir un efecto similar en m.l. sería: */
@@ -259,4 +259,67 @@ blockquote p {
   /* padding: 16px; */
   padding-inline: 16px;
   /* border: 1px solid blue; */
+}
+
+.slider {
+  /* border: 1px solid red; */
+}
+
+.slider-container {
+  /* block-size: 100px; */
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+  /* border: 1px solid purple; */
+}
+
+.video {
+  margin: 0;
+  /* border: 1px solid blue; */
+  display: inline-block;
+  /* width: 100% */ /* Leo usó esto, pero yo prefiero usar inline-size: ;, puesto que estamos en m.l. */
+  inline-size: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  /* border: 1px solid yellow; */
+  text-align: center;
+  margin-block-start: 10px;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: var(--white30);
+  border-radius: 50%;
+}
+
+.form input {
+  inline-size: 100%;
+  border: 1px solid var(--white30);
+  background: #251F24;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white30);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+}
+
+.form input[type="submit"] {
+  background: #157EFB;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.form input::-webkit-input-placeholder {
+  color: var(--white20);
 }
