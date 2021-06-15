@@ -52,8 +52,8 @@ a {
 }
 
 .header {
-  position: sticky;
-  inset-block-start: -44px;
+  /* position: sticky;
+  inset-block-start: -44px; */
   /* Para hacer un modal, empleamos las siguientes tres propiedades con los valores respectivos: */
   /* background: red;
   position: fixed; */
@@ -66,26 +66,28 @@ a {
 }
 
 .header-content {
-  position: relative;
-  inset-block-start: 64px;
+  /* position: relative;
+  inset-block-start: 64px; */
+  padding-inline: 20px;
 }
 
 header {
+  margin-block-start: 20px;
   /* Se puede volver a establecer un nuevo valor para la "custom property"
   '--white10' que aplicará solo a este selector */
   /* --white10: red; */
   font-size: 14px;
   color: var(--white);
-  position: absolute;
+  /* position: absolute; */
   /* El equivalente en m.l. a top sería: */
-  inset-block-start: 0;
+  /* inset-block-start: 0; */
   /* El equivalente en m.l. a bottom sería:  */
   /* inset-block-end: ; */
   /* El equivalente en m.l. a left sería:  */
-  inset-inline-start: -217px;
+  /* inset-inline-start: -217px; */
   /* El equivalente en m.l. a right sería:  */
   /* inset-inline-end: ; */
-  inline-size: 197px;
+  /* inline-size: 197px; */
 }
 
 header li {
@@ -111,8 +113,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 60px;
-  margin-block-start: 64px;
+  font-size: 40px;
+  margin-block-start: 20px;
   margin-block-end: 16px;
   /* Si tuvieramos que alinear el texto de nuestro h1, con un menor tamaño de fuente para ver el efecto,
   emplearíamos en m.l. start (equivalente a left) o end (equivalente a right): */
@@ -176,7 +178,7 @@ p {
   /* background-position: left 50px bottom -50px; posicionará la imagen en alguna combinación de los ejes X e Y,
    o hasta en el centro. */
   /* background-size: cover; Expandirá al 100% sin perder la proporción */
-  height: 350px;
+  block-size: 50px;
 }
 
 .section-content img {
@@ -322,4 +324,33 @@ blockquote p {
 
 .form input::-webkit-input-placeholder {
   color: var(--white20);
+}
+
+@media screen and (min-width: 1366px) {
+  .hero {
+    block-size: 350px;
+  }
+
+  .header {
+    position: sticky;
+    inset-block-start: -44px;
+  }
+
+  .header-content {
+    position: relative;
+    inset-block-start: 64px;
+    padding-inline: 0;
+  }
+
+  header {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -217px;
+    inline-size: 197px;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
 }
