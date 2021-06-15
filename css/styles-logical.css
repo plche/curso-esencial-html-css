@@ -51,16 +51,46 @@ a {
   color: var(--white30);
 }
 
+.header {
+  position: sticky;
+  inset-block-start: -44px;
+  /* Para hacer un modal, empleamos las siguientes tres propiedades con los valores respectivos: */
+  /* background: red;
+  position: fixed; */
+  /* inset: 50px; */
+  /* Para hacer el mismo modal, pero con propiedades resumidas: */
+  /* inset-inline: 50px; */
+  /* inset-block: 50px; */
+  /* block-size: 500px; */
+  /* inline-size: 500px; */
+}
+
+.header-content {
+  position: relative;
+  inset-block-start: 64px;
+}
+
 header {
   /* Se puede volver a establecer un nuevo valor para la "custom property"
   '--white10' que aplicará solo a este selector */
   /* --white10: red; */
   font-size: 14px;
   color: var(--white);
+  position: absolute;
+  /* El equivalente en m.l. a top sería: */
+  inset-block-start: 0;
+  /* El equivalente en m.l. a bottom sería:  */
+  /* inset-block-end: ; */
+  /* El equivalente en m.l. a left sería:  */
+  inset-inline-start: -217px;
+  /* El equivalente en m.l. a right sería:  */
+  /* inset-inline-end: ; */
+  inline-size: 197px;
 }
 
 header li {
   color: var(--white20);
+  margin-block-end: 16px;
 }
 
 header a {
@@ -84,6 +114,10 @@ h1 {
   font-size: 60px;
   margin-block-start: 64px;
   margin-block-end: 16px;
+  /* Si tuvieramos que alinear el texto de nuestro h1, con un menor tamaño de fuente para ver el efecto,
+  emplearíamos en m.l. start (equivalente a left) o end (equivalente a right): */
+  /* text-align: start;
+  font-size: 24px; */
   /* text-decoration: underline; */
   /* font-size: 3.75em; */
 }
@@ -109,6 +143,23 @@ pre {
   padding: 40px;
   overflow: auto;
   border-radius: 8px;
+  border: 10px solid red;
+  border-left: 5px solid blue;
+  /* Este mismo efecto en m.l. seria: */
+  border-inline-start: 5px solid white;
+  /* Si quisieramos un efecto parecido pero arriba y abajo sería: */
+  /* border-block: 20px solid pink; */
+  /* Para conseguir un efecto similar en m.l. sería: */
+  border-block-end: 5px solid pink;
+  border-inline-end: 5px solid green;
+  border-block-start-color: blue;
+  border: 10px solid #5551FF;
+  box-shadow: -10px 10px 0 0 #ABAAF6;
+  /* margin-block-end: 30px;
+  border-radius: 50%;
+  inline-size: 400px;
+  block-size: 400px; */
+  /* border-start-start-radius: 60px; */
 }
 
 p {
